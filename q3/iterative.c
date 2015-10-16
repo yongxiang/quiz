@@ -18,9 +18,8 @@ static double diff(struct timespec t1, struct timespec t2)
 
 void flatten(Node *root)
 {
-    assert(root);
     Node *tmp;
-    while (root->left || root->right) {
+    while (root) {
         if(!root->left) {
             root = root->right;
             continue;
